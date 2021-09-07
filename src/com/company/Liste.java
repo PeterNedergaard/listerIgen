@@ -49,4 +49,22 @@ public class Liste {
 
         return res;
     }
+
+    public Node insertNodeFromTail(String s) {
+
+        Node node = new Node(s);
+
+        if (head == null){
+            head = node;
+            tail = node;
+
+            return tail;
+        }
+
+        tail.next = node;
+        node.previous = tail;
+        tail = node;
+
+        return tail;
+    }
 }

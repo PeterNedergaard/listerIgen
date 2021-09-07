@@ -21,6 +21,17 @@ class ListeTest {
     }
 
     @Test
+    void insertNodeFromTail() {
+
+       liste.insertNodeFromTail("1");
+       liste.insertNodeFromTail("2");
+       liste.insertNodeFromTail("3");
+
+       assertEquals("123",liste.printFromHead());
+
+    }
+
+    @Test
     void printListFromHead() {
 
         liste.insertNodeFromHead("1");
