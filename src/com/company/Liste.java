@@ -5,22 +5,35 @@ public class Liste {
     Node head = null;
     Node tail = null;
 
+
+    public boolean isEmpty(){
+
+        if (head == null){
+            return true;
+        } else
+        {
+            return false;
+        }
+
+    }
+
+
     public Node insertNodeFromHead(String data){
 
         Node n = new Node(data);
 
-        if (head == null){
+        if (isEmpty()){
             head = n;
             tail = n;
 
-            return n;
+            return head;
         }
 
         head.previous = n;
         n.next = head;
         head = n;
 
-        return n;
+        return head;
     }
 
 }
