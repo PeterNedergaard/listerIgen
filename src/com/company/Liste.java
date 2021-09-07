@@ -36,4 +36,17 @@ public class Liste {
         return head;
     }
 
+    public String printFromHead() {
+
+        String res = "";
+        Node node = head;
+
+        while(node != null){
+            res += node.data;
+
+            node = node.next;
+        }
+
+        return res;
+    }
 }
