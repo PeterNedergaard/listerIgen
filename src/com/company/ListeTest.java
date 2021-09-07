@@ -18,6 +18,13 @@ class ListeTest {
 
     @org.junit.jupiter.api.Test
     void insertNodeFromHead() {
+
+        liste.insertNodeFromHead("1");
+        liste.insertNodeFromHead("2");
+        liste.insertNodeFromHead("3");
+
+        assertEquals("321",liste.printFromHead());
+
     }
 
     @Test
